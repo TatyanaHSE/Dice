@@ -1,0 +1,37 @@
+{{ block title }}
+    Part 3 — Final Result
+{{ endblock }}
+
+{{ block content }}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Round</th>
+            <th>Earnings</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for round in rounds %}
+            <tr>
+                <td>{{ round.round_number }}</td>
+                <td>{{ round.earnings }} RUB</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<p>
+    The computer randomly selected Round
+    <strong>{{ selected_round }}</strong>.
+</p>
+
+<p>
+    Your earnings for Part 3 are
+    <strong>{{ final_earnings }} RUB</strong>.
+</p>
+
+{{ next_button }}
+
+{{ endblock }}

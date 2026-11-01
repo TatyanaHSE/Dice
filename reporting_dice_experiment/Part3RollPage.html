@@ -1,0 +1,23 @@
+{{ block title }}
+    Part 3 — Round {{ part3_round }}
+{{ endblock }}
+
+{{ block content }}
+
+<p>
+    The computer rolled a six-sided die three times:
+</p>
+
+<div style="font-size: 24px; margin: 20px 0;">
+    <strong>{{ roll_1 }}</strong>
+    &nbsp;&nbsp;&nbsp;
+    <strong>{{ roll_2 }}</strong>
+    &nbsp;&nbsp;&nbsp;
+    <strong>{{ roll_3 }}</strong>
+</div>
+
+{{ formfield player.part3_answer }}
+
+{{ next_button }}
+
+{{ endblock }}

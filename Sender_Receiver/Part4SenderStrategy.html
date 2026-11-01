@@ -1,0 +1,92 @@
+{{ block title }}
+    Part 4 — Sender Strategy
+{{ endblock }}
+
+{{ block content }}
+
+<p>
+    Imagine that you are the Sender.
+</p>
+
+<p>
+    The computer randomly selects one of the two payoff tables, Table 1 or Table 2.
+    You will now make a decision for each table in advance, and after you have made both decisions the computer
+    will randomly choose one of the two tables to determine the payoffs.
+    The Receiver will not learn which table was randomly selected by the computer when making their decision.
+</p>
+
+<p>
+    Suppose the computer randomly selects Table 1.
+</p>
+
+<hr>
+
+<h4>Table 1</h4>
+
+<table class="table table-bordered text-center">
+    <thead>
+        <tr>
+            <th>Receiver's choice</th>
+            <th>Sender's payoff</th>
+            <th>Receiver's payoff</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Option A</td>
+            <td>100 RUB</td>
+            <td>300 RUB</td>
+        </tr>
+        <tr>
+            <td>Option B</td>
+            <td>300 RUB</td>
+            <td>100 RUB</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>
+    What message would you send to the Receiver in that case?
+</p>
+
+{{ formfield 'part4_sender_strategy_table1' label="" }}
+
+<hr>
+
+<p>
+    Now, suppose the computer randomly selects Table 2.
+</p>
+
+<h4>Table 2</h4>
+
+<table class="table table-bordered text-center">
+    <thead>
+        <tr>
+            <th>Receiver's choice</th>
+            <th>Sender's payoff</th>
+            <th>Receiver's payoff</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Option A</td>
+            <td>300 RUB</td>
+            <td>100 RUB</td>
+        </tr>
+        <tr>
+            <td>Option B</td>
+            <td>100 RUB</td>
+            <td>300 RUB</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>
+    What message would you send to the Receiver in that case?
+</p>
+
+{{ formfield 'part4_sender_strategy_table2' label=""}}
+
+{{ next_button }}
+
+{{ endblock }}

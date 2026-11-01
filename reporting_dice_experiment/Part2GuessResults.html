@@ -1,0 +1,22 @@
+{{ block title }}
+    Part 2 — Results
+{{ endblock }}
+
+{{ block content }}
+
+{% if correct %}
+    <p>Your guess of <strong>{{ player.guess }}</strong> was correct. You earned an additional 300 RUB.</p>
+{% else %}
+    <p>Your guess of <strong>{{ player.guess }}</strong> was incorrect. You did not earn an additional 300 RUB.</p>
+{% endif %}
+
+{% if player.condition == 'feedback' %}
+    <p>
+       The number of rounds in which the other two participants collectively answered YES:
+        <strong>{{ other_yes_count }}</strong>
+    </p>
+{% endif %}
+
+{{ next_button }}
+
+{{ endblock }}

@@ -1,0 +1,84 @@
+{{ block title }}
+    Part 4 — Results
+{{ endblock }}
+
+{{ block content }}
+
+<p>
+    Your randomly selected role was:
+    <strong>{{ role }}</strong>
+</p>
+
+<p>
+    The selected table was:
+    <strong>Table {{ table }}</strong>
+</p>
+
+{% if table == 1 %}
+
+<table class="table table-bordered text-center">
+    <thead>
+        <tr>
+            <th>Receiver's choice</th>
+            <th>Sender's payoff</th>
+            <th>Receiver's payoff</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Option A</td>
+            <td>100 RUB</td>
+            <td>300 RUB</td>
+        </tr>
+        <tr>
+            <td>Option B</td>
+            <td>300 RUB</td>
+            <td>100 RUB</td>
+        </tr>
+    </tbody>
+</table>
+
+{% else %}
+
+<table class="table table-bordered text-center">
+    <thead>
+        <tr>
+            <th>Receiver's choice</th>
+            <th>Sender's payoff</th>
+            <th>Receiver's payoff</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Option A</td>
+            <td>300 RUB</td>
+            <td>100 RUB</td>
+        </tr>
+        <tr>
+            <td>Option B</td>
+            <td>100 RUB</td>
+            <td>300 RUB</td>
+        </tr>
+    </tbody>
+</table>
+
+{% endif %}
+
+<p>
+    The message sent by the Sender was:
+    <strong>{{ sender_message }}</strong>
+</p>
+
+<p>
+    The Receiver's choice was:
+    <strong>Option {{ receiver_choice }}</strong>
+</p>
+
+<p>
+    Your earnings from Part 4:
+    <strong>{{ final_earnings }} RUB</strong>
+</p>
+
+{{ next_button }}
+
+{{ endblock }}

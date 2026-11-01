@@ -1,0 +1,21 @@
+{{ block title }}
+    Round {{ player.round_number }} — Results
+{{ endblock }}
+
+{{ block content }}
+
+<p>Your answer: <strong>{{ player.answer }}</strong></p>
+
+{% if player.answer == 'YES' %}
+    <p>
+        Your earnings in this round: <strong>300 RUB</strong>
+    </p>
+{% else %}
+    <p>
+        Your earnings in this round: <strong>0 RUB</strong>
+    </p>
+{% endif %}
+
+{{ next_button }}
+
+{{ endblock }}

@@ -1,0 +1,50 @@
+{{ block title }}
+    Final Results
+{{ endblock }}
+
+{{ block content }}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Part</th>
+            <th>Earnings</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>Part 1</td>
+            <td>{{ part1_payoff }} RUB</td>
+        </tr>
+
+        <tr>
+            <td>Part 2</td>
+            <td>{{ part2_payoff }} RUB</td>
+        </tr>
+
+        <tr>
+            <td>Part 3</td>
+            <td>{{ part3_payoff }} RUB</td>
+        </tr>
+
+        <tr>
+            <td>Part 4</td>
+            <td>{{ part4_payoff }} RUB</td>
+        </tr>
+
+        <tr>
+            <th>Total</th>
+            <th>{{ total_earnings }} RUB</th>
+        </tr>
+    </tbody>
+</table>
+
+<p>
+    Please take a short survey to complete the experiment.
+    To continue, click <strong>“Next”</strong>.
+</p>
+
+{{ next_button }}
+
+{{ endblock }}

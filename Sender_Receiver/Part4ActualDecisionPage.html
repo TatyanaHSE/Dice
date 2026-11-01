@@ -1,0 +1,88 @@
+{{ block title }}
+    Part 4 — Receiver's decision
+{{ endblock }}
+
+{{ block content }}
+
+<p>
+    Imagine now that you are the Receiver.
+</p>
+
+<p>
+    Remember that the computer randomly selects one of two payoff tables,
+    Table 1:
+</p>
+
+<h4>Table 1</h4>
+
+<table class="table table-bordered text-center">
+    <thead>
+        <tr>
+            <th>Receiver's choice</th>
+            <th>Sender's payoff</th>
+            <th>Receiver's payoff</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Option A</td>
+            <td>100 RUB</td>
+            <td>300 RUB</td>
+        </tr>
+        <tr>
+            <td>Option B</td>
+            <td>300 RUB</td>
+            <td>100 RUB</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>
+    or Table 2:
+</p>
+
+<h4>Table 2</h4>
+
+<table class="table table-bordered text-center">
+    <thead>
+        <tr>
+            <th>Receiver's choice</th>
+            <th>Sender's payoff</th>
+            <th>Receiver's payoff</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Option A</td>
+            <td>300 RUB</td>
+            <td>100 RUB</td>
+        </tr>
+        <tr>
+            <td>Option B</td>
+            <td>100 RUB</td>
+            <td>300 RUB</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>
+    You do not know which table was selected.
+</p>
+
+<p>
+    The Sender has sent you the following message:
+</p>
+
+<p>
+    <strong>{{ sender_message }}</strong>
+</p>
+
+<p>
+    What would you choose?
+</p>
+
+{{ formfield 'part4_receiver_choice' label=""  }}
+
+{{ next_button }}
+
+{{ endblock }}

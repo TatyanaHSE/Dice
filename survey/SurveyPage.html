@@ -1,0 +1,196 @@
+{{ block title }}
+Survey
+{{ endblock }}
+
+
+{{ block content }}
+
+<div class="survey-container">
+
+    <div class="question-block">
+        <h4>1. What is your gender?</h4>
+
+        {{ formfield player.gender label="" }}
+    </div>
+
+
+    <div class="question-block">
+        <h4>2. What is your age?</h4>
+
+        {{ formfield player.age label="" }}
+    </div>
+
+
+    <div class="instructions">
+
+        <p>
+            Below you will find a series of statements about you.
+            Please read each statement and decide how much you agree
+            or disagree with that statement. Then indicate your response
+            using the following scale:
+        </p>
+
+        <p>
+            <strong>5 = strongly agree</strong><br>
+            <strong>4 = agree</strong><br>
+            <strong>3 = neutral (neither agree nor disagree)</strong><br>
+            <strong>2 = disagree</strong><br>
+            <strong>1 = strongly disagree</strong>
+        </p>
+
+        <p>
+            Please answer every statement, even if you are not completely
+            sure of your response.
+        </p>
+
+    </div>
+
+
+    <div class="statement">
+        <p>
+            <strong>1.</strong>
+            I wouldn’t use flattery to get a raise or promotion at work,
+            even if I thought it would succeed.
+        </p>
+
+        {{ formfield player.q1 label="" }}
+    </div>
+
+
+    <div class="statement">
+        <p>
+            <strong>2.</strong>
+            If I want something from someone, I will laugh at that person’s
+            worst jokes.
+        </p>
+
+        {{ formfield player.q2 label="" }}
+    </div>
+
+
+    <div class="statement">
+        <p>
+            <strong>3.</strong>
+            I wouldn’t pretend to like someone just to get that person
+            to do favors for me.
+        </p>
+
+        {{ formfield player.q3 label="" }}
+    </div>
+
+
+    <div class="statement">
+        <p>
+            <strong>4.</strong>
+            If I knew that I could never get caught, I would be willing
+            to steal a million dollars.
+        </p>
+
+        {{ formfield player.q4 label="" }}
+    </div>
+
+
+    <div class="statement">
+        <p>
+            <strong>5.</strong>
+            I would never accept a bribe, even if it were very large.
+        </p>
+
+        {{ formfield player.q5 label="" }}
+    </div>
+
+
+    <div class="statement">
+        <p>
+            <strong>6.</strong>
+            I’d be tempted to use counterfeit money, if I were sure
+            I could get away with it.
+        </p>
+
+        {{ formfield player.q6 label="" }}
+    </div>
+
+
+    <div class="statement">
+        <p>
+            <strong>7.</strong>
+            Having a lot of money is not especially important to me.
+        </p>
+
+        {{ formfield player.q7 label="" }}
+    </div>
+
+
+    <div class="statement">
+        <p>
+            <strong>8.</strong>
+            I would get a lot of pleasure from owning expensive luxury goods.
+        </p>
+
+        {{ formfield player.q8 label="" }}
+    </div>
+
+
+    <div class="statement">
+        <p>
+            <strong>9.</strong>
+            I think that I am entitled to more respect than the average
+            person is.
+        </p>
+
+        {{ formfield player.q9 label="" }}
+    </div>
+
+
+    <div class="statement">
+        <p>
+            <strong>10.</strong>
+            I want people to know that I am an important person of high status.
+        </p>
+
+        {{ formfield player.q10 label="" }}
+    </div>
+
+    <div class="open-question">
+        <p>
+            <strong>11.</strong>
+            Please describe your experience during the experiment.
+            What thoughts or considerations came to mind while you were making
+            your decisions? Was anything unclear or confusing in the instructions
+            or procedure? If so, please describe it.
+        </p>
+
+        {{ formfield player.open_question label="" }}
+    </div>
+
+
+    {{ next_button }}
+
+</div>
+
+
+<style>
+
+    .survey-container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .question-block {
+        margin-bottom: 30px;
+    }
+
+    .instructions {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .statement {
+        margin-bottom: 35px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+    }
+
+</style>
+
+{{ endblock }}
